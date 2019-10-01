@@ -15,16 +15,16 @@ class UserCard extends Component {
 			}
 		} = this.props;
 		return (
-			<div>
-				<img src={avatar_url} />
-				<div>
-					<h3>{login}</h3>
-					<p>{name}</p>
-					<p>Location: {location} </p>
-					<p>Profile: {html_url} </p>
-					<p>Followers: {followers}</p>
-					<p>Following: {following}</p>
-					<p>Bio: {bio}</p>
+			<div className="card">
+				<img className="card-img-top" src={avatar_url} />
+				<div className="card-body">
+					<h3 className="card-title">{login}</h3>
+					<p className="card-text">{name}</p>
+					<p className="card-text">Location: {location} </p>
+					<p className="card-text">Profile: {html_url} </p>
+					<p className="card-text">Followers: {followers}</p>
+					<p className="card-text">Following: {following}</p>
+					<p className="card-text">Bio: {bio}</p>
 				</div>
 			</div>
 		);
