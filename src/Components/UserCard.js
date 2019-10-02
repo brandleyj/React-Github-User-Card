@@ -1,4 +1,15 @@
 import React, { Component } from "react";
+import styled from "styled-components";
+
+const Card = styled.div`
+	max-width: 400px;
+	margin: 2vh;
+	background: #ec9b3b;
+`;
+
+const Image = styled.img`
+	min-width: 400px;
+`;
 
 class UserCard extends Component {
 	render() {
@@ -15,8 +26,8 @@ class UserCard extends Component {
 			}
 		} = this.props;
 		return (
-			<div className="card">
-				<img className="card-img-top" src={avatar_url} />
+			<Card className="card">
+				<Image className="card-img-top" src={avatar_url} />
 				<div className="card-body">
 					<h3 className="card-title">{login}</h3>
 					<p className="card-text">{name}</p>
@@ -26,7 +37,7 @@ class UserCard extends Component {
 					<p className="card-text">Following: {following}</p>
 					<p className="card-text">Bio: {bio}</p>
 				</div>
-			</div>
+			</Card>
 		);
 	}
 }

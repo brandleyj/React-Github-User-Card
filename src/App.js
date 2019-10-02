@@ -2,6 +2,20 @@ import React from "react";
 import "./App.css";
 import axios from "axios";
 import UserCards from "./Components/UserCards";
+import styled from "styled-components";
+
+const Container = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #000000;
+`;
+
+const Title = styled.h1`
+	font-size: 6rem;
+	padding: 5vh;
+	color: #e8647c;
+`;
 
 class App extends React.Component {
 	constructor() {
@@ -36,10 +50,10 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<h1>React Github User Card</h1>
+			<Container>
+				<Title>React Github User Card</Title>
 				<UserCards users={this.state.users} />
-			</div>
+			</Container>
 		);
 	}
 }
